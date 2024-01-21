@@ -15,7 +15,8 @@ class User(AbstractUser):
     REQUIRED_FIELDS = ['username']
     EMAIL_FIELD = 'email'
 
-
+    def __str__(self):
+        return self.user_name
 class RoleUser(models.Model):
     role = models.CharField(max_length=255)
 
