@@ -1,0 +1,12 @@
+{% extends 'frontend/base.html' %}
+{% block title %}{{ detail.type_charba }} | {{ detail.code }}{% endblock %}
+
+{% block content %}
+    <p>тип: {{ detail.type_charba }}</p>
+    <p>код: {{ detail.code }}</p>
+    <p>код цифр: {{ detail.code_chars }}</p>
+    <p>коротко: {{ detail.description }}</p>
+    <p>пользователь: {{ detail.user }}</p>
+    <p>дата регитсраци: {{ detail.date_register }}</p>
+
+{% endblock %}

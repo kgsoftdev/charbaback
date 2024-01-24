@@ -1,0 +1,10 @@
+{% extends 'frontend/base.html' %}
+{% block title %}{{ detail.type_charba }} | {{ detail.code }}{% endblock %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"></button>
+    </form>
+{% endblock %}

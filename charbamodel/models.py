@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+
 from users.models import User
 
 # Create your models here.
@@ -20,6 +22,9 @@ class Charba(models.Model):
 
     def __str__(self):
         return f"{self.type_charba}/{self.code}/{self.user}"
+
+    def get_absolute_url(self):
+        return reverse('list')
 
 class CharbaUpdate(models.Model):
     mew_user = models.ForeignKey(User, on_delete=models.CASCADE)

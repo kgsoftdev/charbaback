@@ -1,0 +1,16 @@
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+li{
+    list-style: none;
+    margin-left: 10px;
+}
+
+.header_menu{
+    display: flex;
+}
+
+.header{
+    display: flex;
+}

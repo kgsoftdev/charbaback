@@ -1,0 +1,31 @@
+{% extends 'frontend/base.html' %}
+{% block title %}Список{% endblock %}
+
+{% block content %}
+    <h1>Малдардын тизмеси</h1>
+
+        <table class="table form-control">
+        <tr>
+            <th>№</th>
+            <th>Малдын түрү</th>
+            <th>Код</th>
+
+            <th>Ээси</th>
+
+
+            <th>Ссылка</th>
+        </tr>
+        {% for data in data %}
+        <tr>
+            <td>{{ data.id }}</td>
+            <td>{{ data.type_charba }}</td>
+            <td>{{ data.code }}</td>
+
+            <td>{{ data.user }}</td>
+
+
+            <td><a href="{% url 'detail' data.id %}">Ссылка</a></td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
